@@ -12,6 +12,14 @@ html
     存储大小   cookie存储空间为4k，localStorage为5M
     存储时效   cookie有设定的有效期，localStorage始终有效
     ps localStorage不能跨浏览器
+5  遇到的浏览器兼容性问题和解决方法
+    css：
+    问题：浏览器的默认的margin和padding不同
+    解决：统一设置*{margin:0;padding:0;}
+    其他：
+    解决：hack \9标记 ie6-10都生效
+
+
 
 css
 1  行内元素？块级元素？
@@ -20,4 +28,38 @@ css
     div table h1... p ul li 等属于块级元素
 2  link和@import
     页面加载时的顺序不一样，link是同时加载，而import是等页面加载完后加载
-3  
+3  盒子模型
+    border padding margin content  
+    ie盒子模型和W3C盒子模型，具体参考demo：https://github.com/guo405394956/demos.git /cssBoxMode/index.html
+4  CSS选择器
+    id选择器  (#J_elementId)
+    类选择器  （.class）
+    标签选择器  （div a p span input table tr td th...）
+    子选择器   （ul>li）
+    后代选择器   （.class span）
+    通配符选择    （*）
+    属性选择器   （input[type = 'button']）
+    伪类选择器   （a:hover, li:nth-child）
+5  css样式应用的优先级
+    内联样式（标签内部） > 嵌入样式（页面中定义的） > 外部引用样式（import导入）
+6  css3新增伪类
+    ::after  清除浮动 clear:both
+    ::before
+    ::checked
+    ::disabled
+7  div水平居中
+    width: 100px; margin: auto;
+    left和margin left设置为50%；margin设置为div容器的一半宽度 
+    transform css3的新特性
+8  div垂直居中
+    transform css3新特性
+    flex布局 align-items: center; 		/* 垂直居中 */      justify-content: center;	/* 水平居中 */
+9  css3的新特性
+   圆角 border-radius
+   阴影 shadow
+   旋转 transform
+   移动 translate
+   平滑过度 transtion
+   动画 animation
+   缩放 scale
+
